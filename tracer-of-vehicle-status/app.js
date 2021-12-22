@@ -4,6 +4,7 @@ dotenv.config();
 const connectToDB = require('./config/db');
 const { swagServe, swagSetup } = require('./libs/swagger');
 const vehicleRoute= require('./routes/vehicleRoute')
+const deviceTypeRoute= require('./routes/deviceTypeRoute')
 
 
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 
 app.use('/vehicle',vehicleRoute)
+app.use('/device_type',deviceTypeRoute)
 app.use('/api-docs',swagServe,swagSetup)
 
 

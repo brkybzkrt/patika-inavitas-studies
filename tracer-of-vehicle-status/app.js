@@ -1,12 +1,18 @@
 const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
-
 const connectToDB = require('./config/db');
+const { swagServe, swagSetup } = require('./libs/swagger');
+
+
 
 const app = express();
 app.use(express.json());
 
+
+
+
+app.use('/api-docs',swagServe,swagSetup)
 
 
 const port =3099 || process.env.PORT

@@ -1,12 +1,13 @@
 const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
-const connectToDB = require('./config/db');
+const connectToDB = require('./config/db'); // DB connection 
 const { swagServe, swagSetup } = require('./libs/swagger');
 
 const vehicleRoute= require('./routes/vehicleRoute')
 const deviceTypeRoute= require('./routes/deviceTypeRoute')
 const deviceRoute= require('./routes/deviceRoute')
+const logTemperatureRoute= require('./routes/logTemperatureRoute')
 
 
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/vehicle',vehicleRoute)
 app.use('/device',deviceRoute)
 app.use('/device_type',deviceTypeRoute)
+app.use('/log_temperature',logTemperatureRoute)
 app.use('/api-docs',swagServe,swagSetup)
 
 

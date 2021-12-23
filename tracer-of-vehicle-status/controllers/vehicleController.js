@@ -8,7 +8,7 @@ const vehicle_create = async (req,res) => {
     try {
         const text="insert into vehicles (vehicle_plate,current_status,is_active) values ($1,$2,$3) returning *"
     
-        const values =[vehicle_plate,current_status,is_active]
+        const values =[vehicle_plate,current_status,is_active] // buradaki parametre sıralaması önemli örneğin => vehicle_plate=$1 ve current_status=$2 gibi
     
         const {rows} = await connectToDB.query(text, values)
         res.status(201).json(rows)
@@ -24,7 +24,7 @@ const vehicle_list = async (req,res) => {
 try {
         const text="select * from vehicles"
     
-        //const values =[]
+        //const values =[] // herhangi bir kritere göre listeleme yapacaksak onu values dizisi içinde göndermemiz gerekiyor
     
         const {rows} = await connectToDB.query(text)
         res.status(200).json(rows)

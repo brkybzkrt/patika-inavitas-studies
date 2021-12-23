@@ -8,6 +8,7 @@ const vehicleRoute= require('./routes/vehicleRoute')
 const deviceTypeRoute= require('./routes/deviceTypeRoute')
 const deviceRoute= require('./routes/deviceRoute')
 const logTemperatureRoute= require('./routes/logTemperatureRoute')
+const logLocationRoute= require('./routes/logLocationRoute')
 
 
 
@@ -18,9 +19,10 @@ app.use(express.json());
 
 // Routes
 app.use('/vehicle',vehicleRoute)
-app.use('/device',deviceRoute)
 app.use('/device_type',deviceTypeRoute)
+app.use('/device',deviceRoute)
 app.use('/log_temperature',logTemperatureRoute)
+app.use('/log_location',logLocationRoute)
 app.use('/api-docs',swagServe,swagSetup)
 
 

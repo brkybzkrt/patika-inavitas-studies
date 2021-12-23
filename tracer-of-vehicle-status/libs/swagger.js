@@ -5,7 +5,7 @@ const options = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "deneme",
+            title: "Tracker Project",
             version: "0.0.1",
             description:
                 "Tracer of the vehicle status",

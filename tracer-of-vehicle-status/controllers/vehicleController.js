@@ -22,7 +22,7 @@ const vehicle_create = async (req,res) => {
 const vehicle_list = async (req,res) => {
 
 try {
-        const text="select * from vehicles"
+        const text="select id, vehicle_plate, current_status, is_active from vehicles"
     
         //const values =[] // herhangi bir kritere göre listeleme yapacaksak onu values dizisi içinde göndermemiz gerekiyor
     

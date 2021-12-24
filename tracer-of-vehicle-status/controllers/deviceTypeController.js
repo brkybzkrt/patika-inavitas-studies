@@ -23,7 +23,7 @@ const type_create = async (req,res) => {
 const type_list = async (req,res) => {
 
 try {
-        const text="select * from device_types"
+        const text="select id, device_name, device_description, is_active from device_types"
     
         //const values =[]
     

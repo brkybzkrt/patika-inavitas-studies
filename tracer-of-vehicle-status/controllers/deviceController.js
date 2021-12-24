@@ -22,7 +22,7 @@ const device_create = async (req,res) => {
 const device_list = async (req,res) => {
 
 try {
-        const text="select * from devices"
+        const text="select id, vehicle_id, device_type_id, device_name, is_online, is_active from devices"
     
         //const values =[]
     

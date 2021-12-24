@@ -22,7 +22,7 @@ const temp_create = async (req,res) => {
 const temp_list = async (req,res) => {
 
 try {
-        const text="select * from log_temperature"
+        const text="select id, vehicle_id, device_id, read_data, created_at  from log_temperature"
     
         //const values =[]
     

@@ -22,7 +22,7 @@ const gps_create = async (req,res) => {
 const gps_list = async (req,res) => {
 
 try {
-        const text="select * from log_location"
+        const text="select id, vehicle_id, device_id, latitude, longitude, created_at from log_location"
     
         //const values =[]
     
